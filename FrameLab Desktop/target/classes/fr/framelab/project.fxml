@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.framelab.controller.ProjectController"
+      prefHeight="400.0" prefWidth="600.0">
+        <top>
+            <HBox>
+                <Button>filtre</Button>
+                <Button>filtre 2</Button>
+                <Button>filtre 3</Button>
+            </HBox>
+        </top>
+    <center>
+        <VBox>
+            <Label>test 2</Label>
+            <ImageView fx:id="displayImage"></ImageView>
+        </VBox>
+    </center>
+</BorderPane>

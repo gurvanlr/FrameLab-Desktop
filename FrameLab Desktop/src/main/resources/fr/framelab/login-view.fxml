@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="fr.framelab.controller.LoginController"
+            prefHeight="400.0" prefWidth="600.0"
+            alignment="CENTER"  spacing="20">
+
+        <TextField fx:id="mailInput" promptText="mail : "  maxWidth="200">frodon.baggins@mail.com</TextField>
+        <PasswordField fx:id="passwordInput" promptText="Mot de passe :" maxWidth="200">frofro</PasswordField>
+        <Button fx:id="connexion" text="connexion" onAction="#Login"></Button>
+        <Label fx:id="feedback"></Label>
+
+
+</VBox>
+
+
+
+
+
+
