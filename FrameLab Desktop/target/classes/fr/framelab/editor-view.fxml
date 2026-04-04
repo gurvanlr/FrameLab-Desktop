@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.framelab.controller.EditorController"
+      prefHeight="540.0" prefWidth="960.0">
+    <top>
+        <HBox alignment="CENTER" spacing="20">
+            <Button onAction="#handleInverseFilter">inversion</Button>
+            <Button onAction="#handleBlackAndWhiteFilter">Black and White</Button>
+            <VBox alignment="CENTER">
+                <Label>Luminosité</Label>
+                <Slider fx:id="brightnessbar" min="0.0" max="2.0" value="1.0" onMouseReleased="#brightness"></Slider>
+            </VBox>
+        </HBox>
+    </top>
+    <center>
+        <HBox fx:id="imageBox" alignment="CENTER">
+            <StackPane fx:id="displayImage"></StackPane>
+        </HBox>
+    </center>
+    <right>
+
+    </right>
+    <left>
+        <VBox>
+            <Button onAction="#createDrawImage">création calc dessin</Button>
+            <Button onAction="#createWritableImage">création calc d'image</Button>
+            <Button onAction="#saveCanvas">save</Button>
+            <Button onAction="#eraseCanva">effacer le calc</Button>
+            <ListView fx:id="listCanvas"></ListView>
+        </VBox>
+    </left>
+</BorderPane>
