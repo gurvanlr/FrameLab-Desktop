@@ -9,12 +9,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Main extends Application {
     static Stage primaryStage;
 
     @Override
-    public void start (Stage stage) throws IOException {
+    public void start (Stage stage) throws IOException, SQLException {
+
+        DataBaseManager.getConnexion();
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fr/framelab/login-view.fxml"));
         Parent root = loader.load();
 

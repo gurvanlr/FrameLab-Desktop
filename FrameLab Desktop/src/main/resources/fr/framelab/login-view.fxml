@@ -14,7 +14,8 @@
 
         <TextField fx:id="mailInput" promptText="mail : "  maxWidth="200">frodon.baggins@mail.com</TextField>
         <PasswordField fx:id="passwordInput" promptText="Mot de passe :" maxWidth="200">frofro</PasswordField>
-        <Button fx:id="connexion" text="connexion" onAction="#Login"></Button>
+        <Button fx:id="connexion" text="connexion" onAction="#login"></Button>
+        <Button fx:id="demoMode" text="Mode démo" onAction="#demo"></Button>
         <Label fx:id="feedback"></Label>
 
 

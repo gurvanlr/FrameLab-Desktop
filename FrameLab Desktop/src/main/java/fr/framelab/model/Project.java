@@ -3,12 +3,16 @@ package fr.framelab.model;
 public class Project {
     private int id;
     private String name;
-    private String image;
+    private int challengeId;
 
-    public Project(int id, String name, String image) {
+    public Project(int id, String name, int challengeId) {
         this.id = id;
         this.name = name;
-        this.image = image;
+        this.challengeId = challengeId;
+    }
+
+    public Project(String name, int challengeId) {
+        this(-1,name,challengeId);
     }
 
     public int getId() {
@@ -27,11 +31,16 @@ public class Project {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
+    public int getChallengeId() {
+        return challengeId;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setChallengeId(int challengeId) {
+        this.challengeId = challengeId;
+    }
+
+    @Override
+    public String toString () {
+        return name;
     }
 }

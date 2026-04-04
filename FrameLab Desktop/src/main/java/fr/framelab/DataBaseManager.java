@@ -8,20 +8,22 @@ public class DataBaseManager {
 
 
     public static Connection getConnexion() throws SQLException {
-        if (connection != null) {
+        if (connection == null) {
             connection = DriverManager.getConnection("jdbc:sqlite:FrameLab.db");
             Statement stmt = connection.createStatement();
             stmt.execute("PRAGMA foreign_keys = ON");
+            initializeTable();
         }
         return connection;
+
     }
 
-    private void initializeTable () throws SQLException {
+    private static void initializeTable () throws SQLException {
         String sql = """
-                CREATE TABLE IF NOT EXIST projects (
+                CREATE TABLE IF NOT EXISTS projects (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
-                image TEXT NOT NULL
+                challengeId INTEGER NOT NULL
                 )
                 """;
         try (PreparedStatement pstmt =connection.prepareStatement(sql)) {

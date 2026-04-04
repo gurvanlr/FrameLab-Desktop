@@ -16,12 +16,17 @@
             <VBox alignment="CENTER" spacing="10">
                 <Label minWidth="200" alignment="center">Projets</Label>
                 <Button alignment="TOP_CENTER" onAction="#newProject">Nouveau Projet</Button>
+                <Button alignment="TOP_CENTER" onAction="#resumeProject">Charger le projet</Button>
+                <Button alignment="TOP_CENTER" onAction="#deleteProject">Supprimer le projet</Button>
+                <ListView fx:id="projects"></ListView>
             </VBox>
         </right>
         <center>
-        <Label fx:id="title"></Label>
-        <Label fx:id="description"></Label>
-        <ImageView fx:id="imageChallenge"></ImageView>
+            <VBox alignment="CENTER" spacing="20">
+                <Label fx:id="title"></Label>
+                <Label fx:id="description"></Label>
+                <ImageView fx:id="imageChallenge" fitHeight="500" fitWidth="500" preserveRatio="true"></ImageView>
+            </VBox>
         </center>
 </BorderPane>
 

@@ -1,5 +1,6 @@
 package fr.framelab.controller;
 
+import fr.framelab.AppSession;
 import fr.framelab.Main;
 import fr.framelab.dto.TokenResponse;
 import fr.framelab.service.AuthService;
@@ -19,7 +20,7 @@ public class LoginController {
     private final AuthService authService = new AuthService();
 
     @FXML
-    private void Login() {
+    public void login() {
         String mail = mailInput.getText();
         String password = passwordInput.getText();
 
@@ -47,5 +48,10 @@ public class LoginController {
         });
 
         new Thread(task).start();
+    }
+
+    public void demo () throws IOException {
+        AppSession.setDemoMode(true);
+        Main.goTo("/fr/framelab/home-screen.fxml");
     }
 }
