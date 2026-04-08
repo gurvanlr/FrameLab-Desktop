@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.framelab.controller.HomeController"
+      prefHeight="400.0" prefWidth="600.0">
+
+        <right>
+            <VBox alignment="CENTER" spacing="10">
+                <Label minWidth="200" alignment="center">Projets</Label>
+                <Button alignment="TOP_CENTER" onAction="#newProject">Nouveau Projet</Button>
+                <Button alignment="TOP_CENTER" onAction="#resumeProject">Charger le projet</Button>
+                <Button alignment="TOP_CENTER" onAction="#deleteProject">Supprimer le projet</Button>
+                <ListView fx:id="projects"></ListView>
+            </VBox>
+        </right>
+        <center>
+            <VBox alignment="CENTER" spacing="20">
+                <Label fx:id="title"></Label>
+                <Label fx:id="description"></Label>
+                <ImageView fx:id="imageChallenge" fitHeight="500" fitWidth="500" preserveRatio="true"></ImageView>
+            </VBox>
+        </center>
+</BorderPane>
+
+
